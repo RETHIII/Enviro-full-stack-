@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviro - Register</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+
+<body class="">
+    <section class="h-100 gradient-form" style="background-color: #eee;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="card-body p-md-5 mx-md-4">
+
+                                    <div class="text-center">
+                                        <img src="{{ url_for('static', filename='images/logo-color.png') }}" style="width: 185px;" alt="logo">
+                                        <h4 class="mt-1 mb-5 pb-1">Join Us at Enviro</h4>
+                                    </div>
+
+                                    <form id="registerForm">
+                                        <p>Please fill in your details to register</p>
+
+                                        <div data-mdb-input-init class="form-outline mb-4">
+                                            <input type="email" id="email" name="email" class="form-control"
+                                                placeholder="" required>
+                                            <label class="form-label" for="email">Email</label>
+                                        </div>
+
+                                        <div data-mdb-input-init class="form-outline mb-4">
+                                            <input type="password" id="password" name="password" class="form-control"
+                                                placeholder="" required>
+                                            <label class="form-label" for="password">Password</label>
+                                        </div>
+
+                                        <div data-mdb-input-init class="form-outline mb-4">
+                                            <input type="password" id="confirmPassword" name="confirmPassword"
+                                                class="form-control" placeholder="" required>
+                                            <label class="form-label" for="confirmPassword">Confirm Password</label>
+                                        </div>
+
+                                        <div class="text-center pt-1 mb-5 pb-1">
+                                            <button id="registerBtn"
+                                                class="btn btn-success btn-block fa-lg gradient-custom-2 mb-3"
+                                                type="submit">Register</button>
+                                        </div>
+
+                                        <div class="d-flex align-items-center justify-content-center pb-4">
+                                            <p class="mb-0 me-2">Already have an account?</p>
+                                            <a href="/login" class="btn btn-outline-success">Login</a>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                    <h4 class="mb-4"style="color: rgb(6, 5, 90);">Welcome to Enviro!</h4>
+                                    <p class="small mb-0"style="color: rgb(6, 5, 90);"> we are pioneers of positive change. Our commitment extends beyond business to building a sustainable future.
+                                         Join us in our journey to innovate, inspire, and improve lives. Together, 
+                                        we create a community where every action counts towards a greener, more responsible world.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        // JavaScript to handle form submission via AJAX
+        document.getElementById('registerForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+
+            // Example: Replace with actual API endpoint for registration
+            fetch('/api/register', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Registration failed');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+
+                    // Replace with actual success handling
+                    window.location.href = data.redirect; // Redirect to index page
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Registration failed! Please try again.'); // Replace with actual error handling
+                });
+        });
+    </script>
+</body>
+
+</html>

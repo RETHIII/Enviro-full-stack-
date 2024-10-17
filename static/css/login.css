@@ -1,0 +1,43 @@
+.gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #a8ff78;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #78ffd6, #a8ff78); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+    
+    @media (min-width: 768px) {
+    .gradient-form {
+    height: 100vh !important;
+    }
+    }
+    @media (min-width: 769px) {
+    .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    color: black;
+    }
+    }
+
+    .form-outline {
+        position: relative;
+        margin-bottom: 1.5rem;
+    }
+    .form-outline label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        padding: 0.5rem;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+    .form-outline input:focus + label,
+    .form-outline input:not(:placeholder-shown) + label {
+        top: -1.5rem;
+        left: 0;
+        height: auto;
+        padding: 0;
+        font-size: 0.85rem;
+        color: #28a745;
+    }
