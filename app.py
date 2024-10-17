@@ -7,7 +7,7 @@ import yaml
 app = Flask(__name__, static_url_path='/static')
 
 # Set a secret key for your application
-app.secret_key = '239efcc6e0641c0964a970dd26a45fa7'
+app.secret_key = ' '
 
 
 # Load YAML configuration
