@@ -1,22 +1,23 @@
-# enviro-fullstack-
+# Enviro-fullstack -
 
 The project aims to provide a user-friendly platform where users can easily schedule waste pickups and manage their profiles. By converting household organic waste into fertilizers and manures.
 The project promotes sustainable practices. It also focuses on the safe disposal of industrial waste to minimize environmental impact.
 
-# Software Requirements-
-### Frontend Technologies-
+# Software Requirements
+### Frontend Technologies
 HTML 
  CSS  
 JavaScript
-### Backend Technologies-
+### Backend Technologies
 Node.js
 Express.js
-### Database Management-
+### Database Management
 MySQL
-### Development Environment-
+### Development Environment
 Visual Studio Code
 
-DEMO :
+## DEMO :
+
 ![Screenshot (479)](https://github.com/user-attachments/assets/25f7cd1d-2846-4604-be39-a1ab2812b435)
 ![Screenshot (480)](https://github.com/user-attachments/assets/be5601dd-b464-40dc-b5e9-e84beda86519)
 ![Screenshot (481)](https://github.com/user-attachments/assets/f32c840c-acf9-4df3-9269-97956cc3eb81)
@@ -27,4 +28,4 @@ DEMO :
 ![Screenshot (489)](https://github.com/user-attachments/assets/9842b38e-9375-4fa7-856a-5a4f9ebe3f8d)
 ![Screenshot (491)](https://github.com/user-attachments/assets/11eac700-1c3d-4f1e-9ce1-e9c03ec4afa9)
 
-## Thank You-
+## Thank You
